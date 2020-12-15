@@ -33,7 +33,7 @@ def initscreen():
         runi2cset(2, '0x00', '0xA1')
         runi2cset(2, '0x00', '0xC8')
         runi2cset(2, '0x00', '0xDA')
-        runi2cset(2, '0x00', '0x22')
+        runi2cset(2, '0x00', '0x22') # 0x22 sets cursor to 8pixel, 0x32 for 4 pixel but then the 5x5 will overflow to the top...
         runi2cset(2, '0x00', '0xA4')
         runi2cset(2, '0x00', '0xA6')
         runi2cset(2, '0x00', '0xD5')
