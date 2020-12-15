@@ -5,6 +5,6 @@ I needed an oled/ssd1306 display attached to a jetson nano for an ML training jo
 <br><br>
 Done: String -> Hex font -> OLED display, clear screen, fill screen, cursor size changes.
 <br><br>
-Needs: Change baud on the i2c line, dynamic font handling (for other hex fonts), Asyncio for multiple subprocesses (maybe try writing to every page/line at once? I dunno... -_-), integrate some PIL stuff for image handling maybe...
+Needs: Change baud on the i2c line, dynamic font handling (for other hex fonts), Asyncio for multiple subprocesses (maybe try writing to every page/line at once?), integrate some PIL stuff for image handling maybe, need to figure out a clean programatic way to do \r\n (keep count on each page/line and then add spaces to the end maybe?)
 <br><br>
 ![A picture](junk/oledtext.jpg)
