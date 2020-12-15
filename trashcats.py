@@ -12,9 +12,8 @@ def runi2cset(iter, bang1, bang2):
         global i2cbus, i2caddress
         for i in range(1,iter):
                 proc = subprocess.Popen(['i2cset', '-y', i2cbus, i2caddress, bang1, bang2], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                stdout, stderr = proc.communicate()
-                        #print(stdout)
-                        #print(stderr)
+                stdout, stderr = proc.communicate() #redo this bullcrap later, its dumb and doesnt need a subproc call
+
 def rescursor():
         runi2cset(2, '0x00', '0x21') # set screen width
         runi2cset(2, '0x00', '0x00') # screen width start
@@ -24,7 +23,7 @@ def rescursor():
         runi2cset(2, '0x00', '0x07') # screen height end line (7 for 128x64)
 
 def initscreen():
-        runi2cset(2, '0x00', '0xAF')
+        runi2cset(2, '0x00', '0xAF') #display on
         runi2cset(2, '0x00', '0xA8')
         runi2cset(2, '0x00', '0x3F')
         runi2cset(2, '0x00', '0xD3')
